@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>{{title}}</title>
+      <link rel="icon" href="/public/favicon.ico" sizes="70x70" type="image/ico">
+      <link rel='stylesheet'type = "text/css" href='/public/css/style.css' />
+      {{#each css}}
+      <link rel= "stylesheet" type = "text/css" herf="/public/css/{{this}}"/>
+      {{/each}}
+   </head>
+   <body>
+      <div class="main-container-div">
+         <div id="container">
+            {{#if (nonEmptyObject messages)}}
+            {{> flash this}}
+            {{/if }}
+            {{> nav}}
+            {{!-- {{> header}} --}}
+            {{{body }}}
+         </div>
+         <div class="footer">
+            {{>footer}}
+         </div>
+      </div>
+   </body>
+</html>

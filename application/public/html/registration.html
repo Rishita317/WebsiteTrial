@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang= "en">
+   <head>
+      <h1>CSC317 Registeration form</h1>
+      <link rel="stylesheet" href="../css/style.css">
+      <script defer src= "../js/Validation.js"></script>
+      <script>
+         console.log()
+      </script> 
+      <title>Registration Form</title>
+   </head>
+   <body>
+      <nav>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="Index.html">index</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="registration.html">Registration </a></li>
+            <li><a href="postvideo.html">Postvideo</a></li>
+            <li><a href="viewpost.html">Viewpost </a></li>
+            <li><a href="profile.html">Profile</a></li>
+         </ul>
+      </nav>
+      <h1>Registration Form</h1>
+      <div>
+         <form>
+            <div class= "input-group">
+               <label for="username">Username </label>
+               <input class"input-text"type="text" id="username" name="username" required>
+            </div>
+            <label for="email">Email </label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password </label>
+            <input type="text" id="password" name="password" required>
+            <label for="confirm_password">Confirm Password </label>
+            <input type="text" id="confirm_password" name="confirm_password" required>
+            <label for="age_check">
+            <input type="checkbox" id="age_check" name="age_check" required>
+            I agree that I am 13 years or older
+            </label>
+            <label for="tos_privacy">
+            <input type="checkbox" id="tos_privacy" name="tos_privacy" required>
+            I accept the <a href="#">TOS and Privacy Rules</a>.
+            </label>
+            <div class="button-container">
+               <button type="submit">Register</button>
+               <button type="reset">Clear Info</button>
+            </div>
+         </form>
+      </div>
+      </main>
+      <footer class = "site-footer">
+         Rishita Meharishi &copy;
+      </footer>
+      <script defer src= "../js/Validation.js"></script>
+   </body>
+   </body>
+</html>

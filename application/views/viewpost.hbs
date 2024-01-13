@@ -1,0 +1,90 @@
+<div class="main-container">
+   <main>
+      <h2 class="h2">View Post</h2>
+      <main class ="post-container"></main>
+     <video class ="video"controls >
+      <source src="/{{currentPost.video}}" type="video/mp4"/></video>
+
+      <h1 class ="post-title">{{currentPost.title}} </h1>
+      <p><b>This is a funny video,In the this video. 
+         We see a duck falling fram a building on a truck </b>
+      </p>
+      <p>By <span class="author">Quackity </span> on <span class="date">March 1, 2023</span></p>
+      <iframe width="500" height="300" src="https://www.youtube.com/embed/s52MdD-lUbs" 
+         title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+         clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="comments">
+         <h2>{{currentPost.title}}</h2>
+         <h5>{{currentPost.username}}</h5>
+         <h6>{{currentPost.createdAt}}</h6>
+         <p>{{currentPost.description}}</p>
+         <h2>Comment section (comment below)</h2>
+         <div id = "comments" class= "comments">
+            {{#each currentPost.comments}}
+            <strong class ="comment-auther"> {{this.username}}</strong>
+            <span class ="comment-date"> {{this.createdAt}}</span>
+            <div class = "comment-text">{{this.text}}</div>
+            {{/each}}
+
+           <i data-postid={{"currentPost.id"}}></i>
+           <button id="comment-button">Comment</button>
+         </div>
+      </div>
+     <script>
+   document.getElementById('comment-button').addEventListener('click', (event) => {
+      console.log('Comment btn clicked');
+      let commentText = document.getElementById("comment-text").value;
+      if (!commentText) return;
+      var postId = ev.currentTarget.dataset.postid;
+
+      fetch("/comments/create",{
+          method:"POST",
+          headers:{
+             Contentype:"application/json"
+          },
+          body:JSON.stringify(
+             {postId: postId,
+              comment:commentText}
+          )
+      })
+      .then(response => response.json())
+      .then(data => {console.log(data);
+      var comments = document.getElementById('comments');
+
+      let commentFragment = document.createElement('tempelate');
+
+ commentFragment.innerHTML = `
+  <div class="comment">
+    <strong class="comment-author">${new Date().toLocaleString("en-us", {
+      dateStyle: "long",
+      timeStyle: "medium"
+    })}</strong>
+    <div class="comment-text">${data.comment}</div>
+  </div>`;
+  comments.append(commentFragment.content.firstChild)
+})
+.catch(err => console.log(err));
+
+   });
+</script>
+
+  {{!-- code for comment bar  --}}
+<!-- Post content -->
+<div id="post-content">
+  <!-- Display post content here -->
+</div>
+
+<!-- Comment section -->
+<div id="comment-section">
+  <div id="comments-list">
+    <!-- Display comments here -->
+  </div>
+  <form id="comment-form">
+    <textarea id="comment-text" placeholder="Write a comment"></textarea>
+    <button class="post-comment" type="submit">Post Comment</button>
+  </form>
+</div>
+
+   </main>
+</div> 
+

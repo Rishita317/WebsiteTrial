@@ -1,0 +1,279 @@
+root {
+  --site-bg: whitesmoke;
+  --footer-header-bg: rgb(19, 2, 2);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 13px;
+}
+
+a {
+  color: rgb(11, 22, 140);
+  text-decoration: none;
+  font-size: large;
+  font-style: sans-serif;
+}
+
+body {
+  /* padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--site-bg);
+  margin: 0;
+  background-image: url("../images/background-image.jpg");
+  image-orientation: center;
+  width: 100%;
+  margin: auto;
+  border-radius: 0.35rem;
+  background-color: #fff;
+}
+
+nav {
+  background-color: rgb(240, 165, 189);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  display: block;
+  color: rgb(64, 6, 83);
+  text-decoration: rgb(115, 5, 125);
+  font-size: 18px;
+  padding: 10px;
+}
+
+form {
+  font-size: medium;
+  font-style: italic;
+  color: #1b2c04;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+form.searchbox {
+  flex-direction: row;
+}
+
+.search-btn {
+  margin-left: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  /* gap: 4px; */
+   /* width: 50%; */
+}
+
+/* .input-text {
+  padding: 4px 8px;
+  border: 1px solid #cacacaca;
+  border-radius: 16px;
+  box-shadow: 0px 0px 4px rgb(65, 9, 118);
+} */
+
+a {
+  color: #1b2c04;
+}
+
+html {
+  font-size: 16px;
+  color: dark-grey;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main-container {
+  padding: 0 20px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.main.login {
+  width: 400px;
+}
+
+label {
+  padding: 5px 0;
+}
+
+input[type="submit"] {
+  FONT-WEIGHT: 600;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #408a41;
+  color: #fff;
+}
+
+.login-btn {
+  background-color: #408a41;
+  color: #fff;
+}
+
+.post-comment {
+  margin-top: 10px;
+}
+
+input {
+  padding: 10px;
+}
+
+header {
+  background-color: var(--footer-header-bg);
+  text-align: justify;
+}
+
+footer {
+  box-shadow: 0px 0 10px rgb(17 36 10 / 20%);  bottom: 10px;
+  background: #eeeeee;
+  padding: 20px;
+  width: 100%;
+  color: #1b2c04;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  padding-left: 110px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 1px;
+  width: 100%;
+}
+
+img.welcome {
+  width: 400px;
+}
+
+header h1 {
+  color: #2f4a0c;
+}
+
+.main-container-div {
+  display: flex;
+  flex-direction: column;
+}
+
+div#container {
+  height: 100%;
+  margin-bottom: 40px;
+}
+
+.alert.stranger-danger {
+  padding: 10px;
+  background: #b01e1e;
+  color: #fff;
+}
+
+.h2 {
+  margin: 10px;
+}
+
+img.thumbnail {
+  width: 100px;
+}
+
+.site-footer {
+  color: whitesmoke;
+  background-color: var(--footer-header-bg);
+  text-align: center;
+  padding: 12px;
+  font-size: 1.5rem;
+}
+
+Login.form-button {
+  background-color: powderblue;
+  color: rgb(138, 28, 247);
+  border: none;
+}
+
+button[type="submit"] {
+  background-color: rgb(64, 138, 64);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  /* margin-top: 10px; */
+  cursor: pointer;
+}
+
+input#search-text {
+  width: 200px;
+  margin-left: 40px;
+}
+
+button[type="reset"] {
+  background-color: rgb(250, 66, 66);
+  color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    /* margin-top: 10px; */
+    cursor: pointer;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* .navbar li {
+  margin-bottom: 10px;
+} */
+
+/* making a hori nav bar uisng felxbox */
+
+/* cc */
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Align items horizontally in the center */
+  width: 200px; /* Adjust the width as needed */
+  background-color: #2f4a0c;
+  width: 100vw;
+}
+
+.navbar a {
+  padding: 10px 20px; /* Add some padding around the links */
+  text-decoration: none;
+  color: rgb(204 204 204);
+  display: flex;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* making log out red */
+
+.logoutButton a {
+  background-color: #b01e1e;
+}

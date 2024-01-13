@@ -1,0 +1,48 @@
+<div class="main-container">
+		<section>
+			{{!-- <h1>CSC317  Website</h1> --}}
+			<h2>Welcome to the Home Page for CSC317</h2>
+			<img class="welcome" src="../public/images/welcome.png" />
+			{{#each posts}}
+			{{>card this}}
+			{{/each }}
+		</section>
+	</div>
+
+<!-- Extra css code  -->
+
+<!-- <style>
+		.photo-container {
+		  display: inline-block;
+		  margin: 10px;
+		  padding: 10px;
+		  border: 1px solid black;
+		  text-align: center;
+		}
+	
+		.photo-container img {
+		  max-width: 100%;
+		  height: auto;
+		}
+	
+		.fade-out {
+		  opacity: 0;
+		  transition: opacity 1s ease-out;
+		}
+	  </style> -->
+
+	  <!-- <div id = "product-list" class= "product-list"></div>
+	<div class = "product-card">
+		<img class = "product-img" src = " "/>
+		<div class ="product-info">
+			<p class = "product-title"</p>
+				<p class = "product-cost"</p></p>
+			</div>
+		</div> -->
+
+		<!-- <div class="product-card">Product 1</div>
+            <div class="product-card">Product 2</div>
+            <div class="product-card">Product 3</div>
+            <div class="product-card">Product 4</div>
+            <div class="product-card">Product 5</div>
+            <div class="product-card">Product 6</div> -->
